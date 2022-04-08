@@ -4,7 +4,8 @@
 
 ### custom ###
 /scss/**/*.css
-
+!/scss/style.min.css
+!/scss/bootstrap.min.css
 
 ### macOS ###
 # General

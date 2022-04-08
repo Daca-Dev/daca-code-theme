@@ -16,6 +16,12 @@
         }
     }
 
+    &-light:hover {
+        color: $light;
+        background-color: $secondary;
+        border-color: $secondary;
+    }
+
     &-square {
         width: 38px;
         height: 38px;

@@ -1,6 +1,7 @@
 @import "base";
 
 .code-block {
+    max-width: 800px;
 
     &--header {
         background-color: $primary;

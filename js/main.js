@@ -105,5 +105,8 @@
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
     
+    const btn = document.querySelector('#portfolio-flters li.btn');
+    btn.click()
+    
 })(jQuery);
 

@@ -1,57 +1,77 @@
+@import "base";
+
 .service-item {
     position: relative;
-    height: 350px;
+    height: 450px;
     padding: 30px 25px;
     background: #FFFFFF;
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
     transition: .5s;
 
-    &:hover {
-        background: var(--primary);
+    img.img-fluid {
+        max-width: 200px;
+    }
 
-        & .service-icon {
-            color: var(--primary);
+    &:hover {
+        background: $primary;
+
+        .service-icon {
+            color: $primary;
             background: url(../img/icon-shape-white.png);
         }
 
-        & h5,
-        & p {
-            color: var(--light);
+        h5, p, small, i.fa {
+            color: $light;
         }
 
-        & a.btn {
-            color: var(--primary);
+        a.btn {
+            color: $primary;
+            animation-name: readMore;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
 
             &::before {
                 width: 100%;
-                background: var(--light);
+                background: $light;
+            }
+
+            i.fa {
+                opacity: 1;
             }
         }
     }
 
-    &.service-icon {
+    .service-icon {
         margin: 0 auto 20px auto;
         width: 90px;
         height: 90px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--light);
+        color: $light;
         background: url(../img/icon-shape-primary.png) center center no-repeat;
         transition: .5s;
     }
 
-    & h5,
-    & p {
+    h5, p, small, i.fa {
         transition: .5s;
     }
 
-    & a.btn {
+    small i.fa {
+        color: $primary;
+    }
+
+    a.btn {
         position: relative;
         display: flex;
-        color: var(--primary);
+        color: $primary;
         transition: .5s;
         z-index: 1;
+
+        i.fa {
+            transition: .5s;
+            opacity: 0;
+        }
 
         &::before {
             position: absolute;
@@ -66,4 +86,10 @@
             z-index: -1;
         }
     }
+}
+
+@keyframes readMore {
+    from {transform: scale(1)}
+    50% {transform: scale(1.08)}
+    to {transform: scale(1)}
 }
