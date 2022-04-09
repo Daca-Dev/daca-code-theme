@@ -1,3 +1,6 @@
+@import "style/highlight/highlight";
+@import "style/slick/slick";
+
 @import "style/base";
 
 @import "style/code-block";
@@ -13,5 +16,5 @@
 @import "style/team";
 @import "style/portafolio";
 @import "style/section";
-
-@import "style/highlight/highlight";
+@import "style/slide-container";
+@import "style/skillbar";
